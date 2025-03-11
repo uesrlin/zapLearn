@@ -1,0 +1,7 @@
+两种方式
+
+1.zapcore.NewTee(consoleCore, fileCore)
+2.zapcore.NewMultiWriteSyncer(
+      zapcore.AddSync(os.Stdout),
+      zapcore.AddSync(file),
+    )
